@@ -4,8 +4,8 @@ document.addEventListener('DOMContentLoaded', (event) => {
     let firstname = document.getElementById('firstname')
     let lastname = document.getElementById('lastname')
     let email = document.getElementById('email')
-    let password = document.getElementById('password')
-    let ConfPassword = document.getElementById('ConfPassword')
+    var password = document.getElementById('password')
+    var ConfPassword = document.getElementById('ConfPassword')
 
     let regexLowerCase = /[a-z]{1,}/
     let regexUpperCase = /[A-Z]{1,}/
@@ -54,9 +54,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
         }
     })
     ConfPassword.addEventListener('keyup', function(){
-        let pvalue =password.value
-        let cpvalue = ConfPassword.value
-        if(pvalue !=cpvalue ){
+        if( password.value != ConfPassword.value ){
             p[0].textContent = 'Mot de passe différent'
             p[0].style.color = 'red'
         }
@@ -67,13 +65,13 @@ document.addEventListener('DOMContentLoaded', (event) => {
     })
     inscription.addEventListener('click', function() {
         let fd = new FormData();
-        fd.append("email", evalue);
-        fd.append("password", pvalue)
-        fd.append("ConfPassword", cpvalue);
+        fd.append("prenom", firstname.value)
+        fd.append("nom", lastname.value)
+        fd.append("email", email.value)
+        fd.append("password", password.value)
+        fd.append("ConfPassword", ConfPassword.value);
         fetch('traitement-register.php', {method: "POST", body: fd})
         .then(response => response.text())
         .then(data => console.log(data));
     })
-
-
 })
