@@ -8,13 +8,13 @@
     <title>Document</title>
 </head>
 <body>
-    <form method="post">
-        <input id="email"type="text" placeholder="email"></input>
-        <input id="firstname"type="text" placeholder="firstname"></input>
-        <input id="lastname"type="text" placeholder="lastname"></input>
-        <input id="password"type="password" placeholder="password"></input>
+    <form method="post" action="">
+        <input id="email" value="email" type="text" placeholder="email"></input>
+        <input id="firstname" value="firstname" type="text" placeholder="firstname"></input>
+        <input id="lastname" value="lastname" type="text" placeholder="lastname"></input>
+        <input id="password" value="password" type="password" placeholder="password"></input>
+        <input id="passwordC" value="passwordC" type="password" placeholder="Confirmed password"></input>
         <button id="button" type="submit">submit</button>
-
     </form>
 </body>
 </html>

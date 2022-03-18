@@ -8,7 +8,7 @@
     <title>connexion</title>
 </head>
 <body>
-    <form method='post' action="">
+    <form method='post' action="traitement-connection.php">
         <label for="email">Email</label>
         <input id ='email' name="email" type="email" placeholder="Email">
         <label for="password">Mot de passe</label>
