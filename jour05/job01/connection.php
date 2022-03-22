@@ -1,3 +1,7 @@
+<?php
+session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,8 +15,10 @@
     <form method='post' action="traitement-connection.php">
         <label for="email">Email</label>
         <input id ='email' name="email" type="email" placeholder="Email">
+
         <label for="password">Mot de passe</label>
         <input id ='password' name="password" type="password" placeholder="Mot de passe">
+
         <button id='connexion' type ='submit'> Connexion </button>
     </form>
 </body>
